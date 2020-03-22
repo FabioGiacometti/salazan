@@ -10,7 +10,7 @@ class Aside extends React.Component{
         const asidefilters = asideItems.map(filtro => <AsideFilter filtro={filtro}/>)
         return(
             <div className="w-64 pr-4 h-full ">
-            <div className="w-64 h-full pl-4 pt-4 flex flex-col justify-evenly fixed">
+            <div className="w-64 h-full pl-4 pt-4 flex flex-col justify-evenly ">
                 {asidefilters} 
                 {/* <AsideFilter asideItems={asideItems}/> */}
             </div>

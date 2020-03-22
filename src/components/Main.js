@@ -10,9 +10,12 @@ export default class Main extends React.Component{
     }
 
     render(){
-        const data = {...fotos[0], ...vehiculos[0]}
+        // let data = []
+        // for(let i= 0; i < vehiculos.length; i++){
+        //     let data[i] = {...fotos[0], ...vehiculos[0]}
+        // }
         const cards = vehiculos.map(vehiculo =><Card vehiculo={vehiculo}/>)
-        console.log("%cesto es data", "color:red", data)
+        // console.log("%cesto es data", "color:red", data)
         return(
             <div className="w-full pr-4 bg-gray-200 flex flex-row flex-wrap" style={{height: "100%", overflow: "scroll"}}>
                 {cards}
