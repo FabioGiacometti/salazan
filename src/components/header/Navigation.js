@@ -1,0 +1,26 @@
+import React from 'react'
+import Searchbar from './Searchbar'
+import HeaderLink from './HeaderLink'
+import items from '../../assets/navigationItems'
+
+export default class Navigation extends React.Component{
+    constructor(){
+        super()
+        // state = {
+
+        // }
+    }
+
+    render(){
+        
+        const navigationMenu = items.map(item =><HeaderLink icon={item.icon} title={item.title}/>)
+        return(
+            <div className="flex flex-col w-3/5 h-full justify-around ">
+                <Searchbar />
+                <div className="flex flex-row justify-between h-1/2 items-start">
+                	{navigationMenu}
+                </div>
+            </div>
+        )
+    }
+}
