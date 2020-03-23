@@ -1,6 +1,6 @@
-const vehiculos = [
+const images = [
   {
-    foto: './src/assets/images/auto1.jpg',
+    foto: './assets/images/auto1.jpg',
     specs: '2019       - NAFTA#3267',
     precio: '$ 670.000',
     modelo: 'FORD KA KA 1.5 S',
@@ -13,20 +13,7 @@ const vehiculos = [
     modelo: 'CHEVROLET ONIX PLUS  1.0 T II PREMIER AT',
     detalles: 'detalle.asp?id=3362'
   },
-  /* {
-    foto: "mostrar_imagen_detalle.asp?id=8302",
-    specs: "2019       - NAFTA#3267",
-    precio: "$ 670.000",
-    modelo: "FORD KA KA 1.5 S",
-    detalles: "detalle.asp?id=3267"
-  },
   {
-    foto: "mostrar_imagen_detalle.asp?id=",
-    specs: "2019       - NAFTA#3362",
-    precio: "$ 1.235.000",
-    modelo: "CHEVROLET ONIX PLUS  1.0 T II PREMIER AT",
-    detalles: "detalle.asp?id=3362"
-  } */ {
     foto: 'mostrar_imagen_detalle.asp?id=7895',
     specs: '2018       - NAFTA#3183',
     precio: '$ 2.000.000',
@@ -609,4 +596,8 @@ const vehiculos = [
   }
 ];
 
-export default vehiculos;
+function imageLoader() {
+  return images;
+}
+
+export default imageLoader;
