@@ -12,7 +12,6 @@ class Aside extends React.Component{
             <div className="w-64 pr-4 h-full hidden md:block">
             <div className="w-full h-full pl-4 pt-4 flex flex-col justify-evenly ">
                 {asidefilters} 
-                {/* <AsideFilter asideItems={asideItems}/> */}
             </div>
             </div>  
         )
