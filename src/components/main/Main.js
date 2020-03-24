@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "./main/Card";
-import vehiculos from "../assets/vehiculos";
+import Card from "./Card";
+import vehiculos from "../../assets/vehiculos";
 // import fotos from '../assets/fotos'
 // import {fotoObj} from './helper'
 

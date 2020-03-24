@@ -1,7 +1,7 @@
 import React from "react";
-import Navigation from "./header/Navigation";
-import Logo from "./header/Logo";
-import CallToAction from "./header/CallToAction";
+import Navigation from "./Navigation";
+import Logo from "./Logo";
+import CallToAction from "./CallToAction";
 
 export default class Header extends React.Component {
   constructor() {

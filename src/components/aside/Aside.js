@@ -1,6 +1,6 @@
 import React from 'react'
-import AsideFilter from './aside/AsideFilter'
-import asideItems from '../assets/asideItems'
+import AsideFilter from './AsideFilter'
+import asideItems from '../../assets/asideItems'
 
 class Aside extends React.Component{
     constructor(props){
