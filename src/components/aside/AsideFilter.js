@@ -9,11 +9,11 @@ export default class AsideFilter extends React.Component {
       const filt = this.props.filtro
     return (
       <div>
-          <h1 className="text-lg text-red-800 mt-2">
+          <h1 className="text-lg text-red-800 mt-4">
               {filt.title}
           </h1>
 
-          <select className="w-full h-8 rounded p-1 text-xs">
+          <select className="w-full h-8 rounded p-1 text-xs ">
             {filt.items.map((item,index) => {return <option key={index}>{item}</option>})}
           </select>
          

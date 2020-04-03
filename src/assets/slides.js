@@ -1,6 +1,6 @@
 const slides = [
     { id: "slide1",
-      image: "http://www.salazanautomotores.com.ar/img_0km_autos/3.jpg",
+      image: "http://2.bp.blogspot.com/-MppWqOw33QQ/VVZZyycoZmI/AAAAAAAABpI/DG4LzaTyxz0/s1600/etios%2B1.png",
       link: "http://www.salazanautomotores.com.ar/0km.asp",
       model: "ETIOS",
       spec: "Full Equipo",

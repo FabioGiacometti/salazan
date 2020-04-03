@@ -16,7 +16,7 @@ export default class Carousel extends React.Component{
     render(){
         const slider = slides.map(item =><Slide item={item} handleSlide={this.handleSlide}/>)
         return(
-            <div ref={this.glider} className="h-full bg-blue-500 flex items-center justify-center" style={{height:"calc(100vh - 95.99px)", width: "300vw"}}>
+            <div ref={this.glider} className=" flex items-center justify-center border-b-5 border-gray-500" style={{height:"100vh", width: "300vw"}}>
                 {slider}
             </div>
         )

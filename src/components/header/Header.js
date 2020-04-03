@@ -12,19 +12,16 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <div
-        className="flex justify-center "
-        style={{ backgroundColor: "#001F31" }}
-      >
+      <>
         <div
-          style={{ maxWidth: "1480px" }}
-          className="w-screen h-24 flex items-center justify-around "
+          style={{ /* maxWidth: "1480px", */ backgroundColor: "#001F31" }}
+          className="flex justify-center w-screen h-24 flex items-center justify-around "
         >
           <Logo />
           <Navigation />
           <CallToAction />
         </div>
-      </div>
+      </>
     );
   }
 }

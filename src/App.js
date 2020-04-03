@@ -6,7 +6,7 @@ import Carousel from './components/carousel/Carousel';
 
 function App() {
   return (
-    <div className="App h-screen " >
+    <div className="App h-screen overflow-x-hidden " >
       <Header />
       <Carousel />
       <div className="flex flex-row h-auto w-full">

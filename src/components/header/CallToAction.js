@@ -1,22 +1,28 @@
 import React from 'react'
 
 export default class CallToAction extends React.Component {
-    constructor(props){
-        super(props)
+    static defaultProps = {
+        text: "Vender",
+        img: require(`../../assets/images/autoAhorro.png`), 
+        bg: "red",
+        styler: {margin: "0", padding: "20px"}
     }
-
+    
     render(){
+        const { bg, img, styler } = this.props
+        console.log("esto es estyler:", styler)
         return(
-            <div>
+
+            <>
                 <button 
-                // style={this.props.color ? this.props.color: null}
-                className="px-6 py-1 bg-red-600 text-red-100 text-lg rounded flex justify-evenly items-center font-bold border border-red-900"
+                style={{styler}}
+                className={`px-6 py-1 bg-${bg}-600 border-${bg}-800 text--100 text-lg rounded flex justify-evenly items-center font-bold border md:static fixed right-0 bottom-0`}
                 onClick={()=>console.log(this)}
                 >
-                <img className="mr-4 h-10" src={this.props.img ? require(this.props.img) : require('../../assets/images/autoAhorro.png')}/> 
-                    {this.props.text? this.props.text : "Vender"}
+                {this.props.img && <img className="mr-4 h-10" src={require(`${img}`)}/> }
+                    {this.props.text}
                 </button>
-            </div>
+            </> 
         )
     }
 }

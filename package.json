@@ -16,7 +16,8 @@
     "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "curl -X POST https://api.zeit.co/v1/integrations/deploy/QmUg5oSmMr1v4fBjHDUqd7LJFAv1yEAzh71VjvDNLDCehi/MBZ2A8jvF1"
   },
   "eslintConfig": {
     "extends": "react-app"
