@@ -39,7 +39,7 @@ export default class Main extends React.Component {
       render() {
         const vehiculos = this.state.items;
         console.log("el tipo de vehiculos es",typeof vehiculos === Array)
-        const cards = vehiculos.map(vehiculo => <Card vehiculo={vehiculo} />);
+        const cards = vehiculos.map(vehiculo => <Card vehiculo={vehiculo} key={vehiculo.id}/>);
         
     return (
       <div
