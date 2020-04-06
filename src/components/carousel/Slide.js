@@ -8,7 +8,6 @@ export default class Slide extends React.Component {
     const handleSlide = this.props.handleSlide;
     const img = empresa;
     {
-      console.log("%cthis is image", "font-size:30px", image);
     }
     return (
       <div

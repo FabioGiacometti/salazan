@@ -17,7 +17,6 @@ export default class AsideFilter extends React.Component {
             {filt.items.map((item,index) => {return <option key={index}>{item}</option>})}
           </select>
          
-        {console.log("este es el tipo de filt.item", Array.isArray(filt.items))}        
       </div>
     );
   }
