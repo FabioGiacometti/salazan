@@ -13,8 +13,9 @@ class Aside extends React.Component {
       <AsideFilter filtro={filtro} />
     ));
     const asideFilterContainers = "w-full h-auto pl-4 pt-4 flex flex-col justify-evenly"
+    const asideContainer = "w-64 pr-4 h-full hidden md:block "
     return (
-      <div className="w-64 pr-4 h-full hidden md:block">
+      <div className={asideContainer}>
         <div className={asideFilterContainers}>
           {asidefilters}
         <hr style={{marginTop:"20px"}}/>
