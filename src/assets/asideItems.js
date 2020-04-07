@@ -4,6 +4,7 @@ const asideItems = [
       id:"buscar_marca_usados",     
       type: "option",
       items: [
+        '-- Seleccionar Marca --',
         'Todos',
         'AUDI',
         'CHEVROLET',
@@ -31,6 +32,7 @@ const asideItems = [
     id:"buscar_combustible_usados", 
       type: "option",
       items: [
+        '-- Seleccionar Combustible',
         'Todos',
         'Nafta',
         'Diesel',
@@ -41,6 +43,7 @@ const asideItems = [
     id:"buscar_desde_anio_usados",  
       type: "option",
       items: [
+        '-- Desde Año --',
         'Todos',
         1994,
         1995,
@@ -75,6 +78,7 @@ const asideItems = [
     id:"buscar_hasta_anio_usados", 
       type: "option",
       items: [
+        '-- Hasta Año --',
         'Todos',
         1994,
         1995,
@@ -109,7 +113,8 @@ const asideItems = [
     id:"buscar_desde_precio_usados", 
       type: "option",
       items: [
-          'Todos',
+        '-- Desde Precio --',
+        'Todos',
           90000,
           130000,
           180000,
@@ -171,6 +176,7 @@ const asideItems = [
     id:"buscar_hasta_precio_usados", 
       type: "option",
       items: [
+        '-- Hasta Precio --',
         'Todos',
         90000,
         130000,

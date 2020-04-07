@@ -15,8 +15,8 @@ export default class Navigation extends React.Component{
         
         const navigationMenu = items.map(item =><HeaderLink icon={item.icon} title={item.title}/>)
         return(
-            <div className="flex flex-col w-3/5 h-full justify-around ">
-                <Searchbar />
+            <div className="flex flex-col h-full justify-around" style={{minWidth: "700px"}}>
+                {/* <Searchbar /> */}
                 <div className="flex flex-row justify-between h-1/2 items-start">
                 	{navigationMenu}
                 </div>

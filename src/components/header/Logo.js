@@ -8,8 +8,8 @@ export default class Logo extends React.Component {
   render() {
     return (
       <img
-        className="h-16 flex-shrink"
-        src={require("../../assets/images/logo.png")}
+        className="h-8 flex-shrink"
+        src={require("../../assets/images/logoHoriz.png")}
       />
     );
   }

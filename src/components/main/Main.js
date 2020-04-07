@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import Modal from 'react-modal';;
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ export default class Main extends React.Component {
       error: null,
       isLoaded: false,
       items: [],
+      modalIsOpen: false,
     };
   }
 
@@ -21,7 +23,7 @@ export default class Main extends React.Component {
           console.log("esto es result", result);
           this.setState({
             isLoaded: true,
-            items: result.data.vehiculos
+            items: result.data.vehiculos,
           });
         },
         // Note: it's important to handle errors here
@@ -33,21 +35,58 @@ export default class Main extends React.Component {
             error,
           });
         }
-        );
+      );
+  }
+
+  
+  render() {
+    function afterOpenModal() {
+      // references are now sync'd and can be accessed.
+      subtitle.style.color = '#f00';
+    }
+    var subtitle
+    const  handleModal = () => this.setState({modalIsOpen: !this.state.modalIsOpen})
+    const vehiculos = this.state.items
+    const cards = vehiculos.map((vehiculo) => (<Card vehiculo={vehiculo} key={vehiculo.id} handleModal={handleModal}/>))
+    const customStyles = {
+      content : {
+        top                   : '50%',
+        left                  : '50%',
+        right                 : 'auto',
+        bottom                : 'auto',
+        marginRight           : '-50%',
+        transform             : 'translate(-50%, -50%)'
       }
-      
-      render() {
-        const vehiculos = this.state.items;
-        console.log("el tipo de vehiculos es",typeof vehiculos === Array)
-        const cards = vehiculos.map(vehiculo => <Card vehiculo={vehiculo} key={vehiculo.id}/>);
-        
+    };
     return (
-      <div
-        className="w-full pr-4 bg-gray-200 flex flex-row flex-wrap"
-        style={{ height: "100%", overflow: "scroll" }}
-      >
-        {cards}
-      </div>
+      <>
+      <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={handleModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        > <h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>
+        <button onClick={handleModal}>close</button>
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </Modal>
+        <div
+          className="w-full pr-4 bg-gray-300 flex flex-row flex-wrap"
+          style={{ height: "100%" }}
+          id="main"
+        >
+          
+          {cards}
+        </div>
+      </>
     );
   }
 }
+

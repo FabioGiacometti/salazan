@@ -1,6 +1,6 @@
 const slides = [
     { id: "slide1",
-      image: "http://2.bp.blogspot.com/-MppWqOw33QQ/VVZZyycoZmI/AAAAAAAABpI/DG4LzaTyxz0/s1600/etios%2B1.png",
+      image: "https://img.indianautosblog.com/2016/04/New-Toyota-Etios-front-quarter-launched-in-Brazil.jpg",
       link: "http://www.salazanautomotores.com.ar/0km.asp",
       model: "ETIOS",
       spec: "Full Equipo",
