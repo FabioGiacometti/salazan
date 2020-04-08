@@ -1,7 +1,12 @@
+import {ic_time_to_leave} from 'react-icons-kit/md/ic_time_to_leave'
+import {ic_view_carousel} from 'react-icons-kit/md/ic_view_carousel'
+import {ic_local_gas_station} from 'react-icons-kit/md/ic_local_gas_station'
+import {ic_date_range} from 'react-icons-kit/md/ic_date_range'
+import {ic_attach_money} from 'react-icons-kit/md/ic_attach_money'
 const asideItems = [
   {
     title: "Marca",
-    icon: "FaCar",
+    icon: ic_time_to_leave,
     name: "buscar_marca_usados",
     id: "buscar_marca_usados",
     type: "option",
@@ -25,7 +30,7 @@ const asideItems = [
   },
   {
     title: "Modelo",
-    icon: "MdNewReleases",
+    icon: ic_view_carousel,
     name: "buscar_modelo_usados",
     id: "buscar_modelo_usados",
     type: "option",
@@ -33,7 +38,7 @@ const asideItems = [
   },
   {
     title: "Combustible",
-    icon: "MdLocalGasStation",
+    icon: ic_local_gas_station,
     name: "buscar_combustible_usados",
     id: "buscar_combustible_usados",
     type: "option",
@@ -41,7 +46,7 @@ const asideItems = [
   },
   {
     title: "Filtar por Año",
-    icon: "MdDateRange",
+    icon: ic_date_range,
     name: "buscar_desde_anio_usados",
     id: "buscar_desde_anio_usados",
     type: "option",
@@ -115,7 +120,7 @@ const asideItems = [
   },
   {
     title: "Filtrar por Precio",
-    icon: "FaCommentDollar",
+    icon: ic_attach_money,
     name: "buscar_desde_precio_usados",
     id: "buscar_desde_precio_usados",
     type: "option",

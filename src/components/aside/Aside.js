@@ -2,6 +2,7 @@ import React from "react";
 import AsideFilter from "./AsideFilter";
 import asideItems from "../../assets/asideItems";
 import CallToAction from "../header/CallToAction";
+import { Icon } from 'react-icons-kit'
 
 
 class Aside extends React.Component {
