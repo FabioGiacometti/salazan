@@ -13,7 +13,7 @@ export default class  CallToAction extends React.Component {
 
   render() {
     const { bg, img, styler } = this.props;
-    const ButtonClass = `px-6 bg-${bg}-600 border-${bg}-700 text--100 text-lg rounded flex justify-evenly items-center font-bold text-white border md:static fixed right-0 bottom-0`;
+    const ButtonClass = `px-4 bg-${bg}-600 border-${bg}-700 text--100 text-lg rounded flex justify-evenly items-center font-bold text-white border md:static fixed right-0 bottom-0 h-8 w-full max-w-xs	shadow-2xl`;
    
     return (
       <>
@@ -24,11 +24,14 @@ export default class  CallToAction extends React.Component {
         >
           {this.props.img && (
             <img
-              className="mr-4 h-10"
+              className="mr-4 mt-1 h-6"
               src={require("../../assets/images/autoAhorro.png")}
+              alt=""
             />
           )}
-          {this.props.text}
+          <p className="text-sm">
+            {this.props.text}
+          </p>
         </button>
       </>
     );

@@ -2,23 +2,20 @@ import React from "react";
 import AsideFilter from "./AsideFilter";
 import asideItems from "../../assets/asideItems";
 import CallToAction from "../header/CallToAction";
-import { Icon } from 'react-icons-kit'
-
 
 class Aside extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   render() {
 
     const asidefilters = asideItems.map(filtro => (
-      <AsideFilter filtro={filtro} />
+      <AsideFilter filtro={filtro} key={filtro.id}/>
     ));
     const asideFilterContainers = "w-full h-auto pl-4 pt-4 flex flex-col justify-evenly"
     const asideContainer = "w-64 pr-4 h-full hidden md:block bg-gray-200"
     return (
       <div className={asideContainer}>
         <div className={asideFilterContainers}>
+        <h2 className="font-black text-gray-600">Filtrar Vehiculos</h2>
           {asidefilters}
         <hr style={{marginTop:"20px"}}/>
         <CallToAction

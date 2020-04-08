@@ -1,20 +1,11 @@
 import React from "react";
 import Icon from "react-icons-kit";
-import {
-  MdNewReleases,
-  MdLocalGasStation,
-  MdDateRange,
-} from "react-icons-kit/md/";
 
 export default class AsideFilter extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+ 
   render() {
     const filt = this.props.filtro;
     const icon = filt.icon;
-    // console.log("esto es icon", icon.split('"'))
     return (
       <div className="mt-2">
         <div className="flex flex-row text-red-700 items-center">

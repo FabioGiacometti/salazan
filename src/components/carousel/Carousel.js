@@ -13,8 +13,10 @@ export default class Carousel extends React.Component{
         console.log("he sido presionado!")
     }
 
+
+
     render(){
-        const slider = slides.map(item =><Slide item={item} handleSlide={this.handleSlide}/>)
+        const slider = slides.map(item =><Slide item={item} handleSlide={this.handleSlide} key={item.id}/>)
         return(
             <div ref={this.glider} className=" flex items-center justify-center border-b-5 border-gray-500" style={{height:"100vh", width: "300vw"}}>
                 {slider}

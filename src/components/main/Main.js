@@ -20,7 +20,6 @@ export default class Main extends React.Component {
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log("esto es result", result);
           this.setState({
             isLoaded: true,
             items: result.data.vehiculos,

@@ -1,0 +1,11 @@
+.navItem{
+    box-sizing: border-box;
+    border-bottom: solid 3px transparent;
+    height: 20px;
+    padding: 10px ;
+    transition: border-bottom 200ms;
+}
+
+.navItem:hover  {
+    border-bottom: solid 3px #006da8;
+}

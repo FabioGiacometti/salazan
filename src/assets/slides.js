@@ -8,15 +8,15 @@ const slides = [
       conditions: "Entrega y cuotas"
     },
     { id: "slide2",
-      image: "http://www.salazanautomotores.com.ar/img_0km_autos/3.jpg",
+      image: "https://www.ford.com/campaignlibs/content/dam/ford_com/en_us/focusst/us/wired/gallery/fullscreen/17FCS_ST_Gallery_11_1250.jpg",
       link: "http://www.salazanautomotores.com.ar/0km.asp",
-      model: "ETIOS",
+      model: "FOCUS",
       spec: "Full Equipo",
       price: "$80.000",
       conditions: "Entrega y cuotas"
     },
     { id: "slide3",
-      image: "http://www.salazanautomotores.com.ar/img_0km_autos/3.jpg",
+      image: "http://s3.caradvice.com.au/wp-content/uploads/2017/04/2017-Ford-Ranger-Wildtrak-1.jpg",
       link: "http://www.salazanautomotores.com.ar/0km.asp",
       model: "ETIOS",
       spec: "Full Equipo",
