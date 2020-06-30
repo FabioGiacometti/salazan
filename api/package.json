@@ -1,0 +1,46 @@
+{
+  "name": "api-salazan",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "API-Automotores Salazan",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "ts-node -r ./src/index.ts",
+    "start:prod": "cross-env NODE_ENV=production node dist/index.js",
+    "start:watch": "nodemon"
+  },
+  "author": "ROSS",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mssql": "^6.2.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.25"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/node": "^14.0.14",
+    "nodemon": "^1.18.4",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts"
+  }
+}
