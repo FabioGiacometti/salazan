@@ -7,7 +7,6 @@ class ModeloService {
 
   public async getAllModelos(req: express.Request, res: express.Response) {
     const modelos = await getRepository(Modelos).find({ select: ["modelo"] });
-    return res.send(modelos);
   }
 }
 
