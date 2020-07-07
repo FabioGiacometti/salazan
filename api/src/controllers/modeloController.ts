@@ -1,7 +1,7 @@
 import * as express from "express";
-import ModeloService from "../services/modeloService";
+import { ModeloService } from "../services";
 
-class ModeloController {
+export class ModeloController {
   public path = "/modelos";
   public router: express.Router = express.Router();
 
@@ -53,5 +53,3 @@ class ModeloController {
     next();
   }
 }
-
-export default ModeloController;

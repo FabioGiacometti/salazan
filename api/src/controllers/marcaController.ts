@@ -1,7 +1,7 @@
 import * as express from "express";
-import MarcaService from "../services/marcaServices";
+import { MarcaService } from "../services";
 
-class MarcaController {
+export class MarcaController {
   public path = "/marcas";
   public router: express.Router = express.Router();
 
@@ -14,5 +14,3 @@ class MarcaController {
     this.router.get(this.path, marcaService.getAllMarcas);
   }
 }
-
-export default MarcaController;

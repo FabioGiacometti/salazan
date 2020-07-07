@@ -2,7 +2,7 @@ import * as express from "express";
 import { Modelos } from "../models/modelos";
 import { getRepository } from "typeorm";
 
-class ModeloService {
+export class ModeloService {
   constructor() {}
 
   public async getAllModelos(req: express.Request, res: express.Response) {
@@ -21,5 +21,3 @@ class ModeloService {
     return res.send(modelosXmarca);
   }
 }
-
-export default ModeloService;

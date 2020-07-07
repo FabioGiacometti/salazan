@@ -2,7 +2,7 @@ import * as express from "express";
 import { Marcas } from "../models/marcas";
 import { getRepository } from "typeorm";
 
-class MarcaService {
+export class MarcaService {
   constructor() {}
 
   public async getAllMarcas(req: express.Request, res: express.Response) {
@@ -10,5 +10,3 @@ class MarcaService {
     return res.send(marcas);
   }
 }
-
-export default MarcaService;
