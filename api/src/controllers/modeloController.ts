@@ -15,6 +15,7 @@ class ModeloController {
 
     // Controller endpoints
     this.router.get(this.path, modeloService.getAllModelos);
+    this.router.get(this.path + "/:idMarca", modeloService.getModelosXmarca);
   }
 
   public validateInput(
