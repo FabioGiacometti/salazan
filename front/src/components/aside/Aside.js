@@ -10,20 +10,17 @@ class Aside extends React.Component {
     const asidefilters = asideItems.map(filtro => (
       <AsideFilter filtro={filtro} key={filtro.id}/>
     ));
-    const asideFilterContainers = "w-full h-auto pl-4 pt-4 flex flex-col justify-evenly"
-    const asideContainer = "w-64 pr-4 h-full hidden md:block bg-gray-200"
+
     return (
-      <div className={asideContainer}>
-        <div className={asideFilterContainers}>
-        <h2 className="font-black text-gray-600">Filtrar Vehiculos</h2>
-          {asidefilters}
-        <hr style={{marginTop:"20px"}}/>
-        <CallToAction
-          text={"Filtrar"}
-          bg={"red"}
-          styler={{margin: "1em auto", padding: "100px"}}
-          img={null}
-        />
+      <div className="w-auto pr-4 h-full hidden md:block bg-gray-200 shadow-sm sticky">
+        <div className="w-full h-auto px-4 py-2 flex flex-row justify-evenly items-center">
+        
+          <div className="items-end flex flex-row">
+            {asidefilters}
+          </div>
+
+          <button className="w-auto py-1 px-5 bg-indigo-500 text-white">Filtrar vehiculos</button>
+       
         </div>
       </div>
     );

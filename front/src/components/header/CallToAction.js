@@ -13,7 +13,7 @@ export default class  CallToAction extends React.Component {
 
   render() {
     const { bg, img, styler } = this.props;
-    const ButtonClass = `px-4 bg-${bg}-600 border-${bg}-700 text--100 text-lg rounded flex justify-evenly items-center font-bold text-white border md:static fixed right-0 bottom-0 h-8 w-full max-w-xs	shadow-2xl`;
+    const ButtonClass = `px-4 bg-${bg}-600 border-${bg}-700 text--100 text-lg rounded flex justify-evenly items-center font-bold text-white border flex right-0 bottom-0 h-8 w-full max-w-xs	shadow-2xl`;
    
     return (
       <>
