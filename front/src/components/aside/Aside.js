@@ -15,11 +15,11 @@ class Aside extends React.Component {
       <div className="w-auto pr-4 h-full hidden md:block bg-gray-200 shadow-sm sticky">
         <div className="w-full h-auto px-4 py-2 flex flex-row justify-evenly items-center">
         
-          <div className="items-end flex flex-row">
+          <div className="items-end flex flex-row justify-start w-full">
             {asidefilters}
           </div>
 
-          <button className="w-auto py-1 px-5 bg-indigo-500 text-white">Filtrar vehiculos</button>
+          <button className="w-64 py-1 px-5 bg-indigo-500 text-white">Filtrar vehiculos</button>
        
         </div>
       </div>

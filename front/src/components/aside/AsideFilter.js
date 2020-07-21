@@ -7,7 +7,7 @@ export default class AsideFilter extends React.Component {
     const filt = this.props.filtro;
     const icon = filt.icon;
     return (
-      <div className="mt-2">
+      <div className="mt-2 mr-2 min-w-64">
         <div className="flex flex-row text-red-700 items-center">
           {icon && <Icon icon={icon} style={{marginRight: "8px"}}/>}
           {filt.title && (

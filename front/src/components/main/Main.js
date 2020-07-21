@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
-import Modal from 'react-modal';;
+import Modal from 'react-modal';
+import ContactButton from "./ContactButton"
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -83,6 +84,7 @@ export default class Main extends React.Component {
         >
           
           {cards}
+          <ContactButton/>
         </div>
       </>
     );

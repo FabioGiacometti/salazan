@@ -9,12 +9,12 @@ export default class Slide extends React.Component {
     // const img = empresa;
     return (
       <div
-        className="h-screen w-screen overflow-hidden flex flex-col items-center justify-center bg-center bg-no-repeat bg-cover"
+        className="h-screen w-screen overflow-hidden flex flex-col items-center bg-center bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${image})`,
         }}>
         <div
-          className="w-full sm:w-auto relative h-full m-0 md:my-20 md:mx-12 self-start flex flex-col justify-evenly sm:p-16 items-center"
+          className="w-full sm:w-auto relative h-full m-0 md:my-20 md:mx-12 self-start flex flex-col justify-center sm:justify-evenly pb-32 sm:pb-16 sm:p-16 items-center"
           style={{ backgroundColor: "#00000050" }}>
           <p
             className="font-black text-white text-6xl"
@@ -28,12 +28,9 @@ export default class Slide extends React.Component {
           </p>
           <h4 className="text-white">Entrega y cuotas</h4>
           <br />
-          <CallToAction
-            bg={"gray-300"}
-            text={"Ver Mas"}
-            img={null}
-            styler={{ padding: "130px" }}
-          />
+          <div className="w-56 ">
+            <a href="#" className="block hover:bg-white border border-4 w-full text-center text-gray-100 hover:text-gray-900 py-2 px-6 rounded transition-all duration-500 ease-in-out">Ver Mas</a>
+          </div>
           <button onClick={() => handleSlide()}></button>
         </div>
       </div>
