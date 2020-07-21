@@ -5,13 +5,13 @@ const url = "http://www.salazanautomotores.com.ar/";
 export default class Card extends React.Component {
 
   render() {
-    // const uri = "../../assets/images/autos/";
-    // const detalle = this.props.vehiculo.detalles;
-    // const verMas = `${url}${detalle}`;
-    console.log("esto es url",this.props)
+      // const uri = "../../assets/images/autos/";
+      // const detalle = this.props.vehiculo.detalles;
+      // const verMas = `${url}${detalle}`;
+      // console.log("esto es url",this.props)
     const { specs, precio, foto, modelo, dir } = this.props.vehiculo;
     const slicedSpecs = specs.split("#");
-    const handleModal = this.props.handleModal;
+    // const handleModal = this.props.handleModal;
     const bottomRow = "flex flex-row justify-between w-full";
     const cardStyle =
       "h-auto w-auto bg-white ml-4 mt-4 rounded-lg shadow hover:shadow-md overflow-hidden";

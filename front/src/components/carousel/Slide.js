@@ -29,7 +29,7 @@ export default class Slide extends React.Component {
           <h4 className="text-white">Entrega y cuotas</h4>
           <br />
           <div className="w-56 ">
-            <a href="#" className="block hover:bg-white border border-4 w-full text-center text-gray-100 hover:text-gray-900 py-2 px-6 rounded transition-all duration-500 ease-in-out">Ver Mas</a>
+            <span  className="block hover:bg-white border-4 w-full text-center text-gray-100 hover:text-gray-900 py-2 px-6 rounded transition-all duration-500 ease-in-out">Ver Mas</span>
           </div>
           <button onClick={() => handleSlide()}></button>
         </div>
