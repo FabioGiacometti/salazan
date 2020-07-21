@@ -8,7 +8,8 @@ export default class Card extends React.Component {
     // const uri = "../../assets/images/autos/";
     // const detalle = this.props.vehiculo.detalles;
     // const verMas = `${url}${detalle}`;
-    const { specs, precio, foto, modelo } = this.props.vehiculo;
+    console.log("esto es url",this.props)
+    const { specs, precio, foto, modelo, dir } = this.props.vehiculo;
     const slicedSpecs = specs.split("#");
     const handleModal = this.props.handleModal;
     const bottomRow = "flex flex-row justify-between w-full";
@@ -24,7 +25,7 @@ export default class Card extends React.Component {
     return (
       <div
         className={cardStyle}
-        style={{ maxWidth: "320px", minWidth: "240px", flex: "1" }}
+        style={{minWidth: "240px", flex: "1" }}
       >
         {/* <a href={verMas}> */}
         <div className="h-48 bg-cover" style={cardImageStyle}></div>
@@ -36,14 +37,14 @@ export default class Card extends React.Component {
           </div>
           <div className={bottomRow}>
             <p className="self-start">{precio}</p>
-            <span
+            <a href={`http://www.salazanautomotores.com.ar/${dir}`}
               className="text-right text-blue-700 hover:font-black"
-              onClick={handleModal}
+              // onClick={handleModal}
               style={{ cursor: "pointer " }}
             >
               {" "}
               Ver Mas
-            </span>
+            </a>
           </div>
         </div>
         {/* </a> */}

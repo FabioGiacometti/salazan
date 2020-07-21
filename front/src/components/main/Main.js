@@ -78,8 +78,8 @@ export default class Main extends React.Component {
         </form>
       </Modal>
         <div
-          className="w-full pr-4 bg-gray-300 flex flex-row flex-wrap"
-          style={{ height: "100%" }}
+          className="h-full w-full pr-4 bg-gray-300 flex flex-row flex-wrap"
+          style={{  }}
           id="main"
         >
           
