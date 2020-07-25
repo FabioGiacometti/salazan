@@ -9,7 +9,7 @@ export class VehiculoService {
   public async getVehiculosByCod(req: express.Request, res: express.Response) {
     const cod_auto = req.params.cod_auto;
 
-    const vehiculos = await getRepository(Vehiculos)
+    const vehiculo = await getRepository(Vehiculos)
       .createQueryBuilder("vehiculos")
       .select([
         "vehiculos",
@@ -28,7 +28,12 @@ export class VehiculoService {
       .leftJoin("vehiculos.imagenes", "imagenes")
       .where("vehiculos.cod_auto = :cod", { cod: cod_auto })
       .getOne();
-    return res.send(vehiculos);
+
+    vehiculo.imagenes.forEach((element) => {
+      let imageBase64 = Buffer.from(element.imagen).toString("base64");
+      element.imagen = imageBase64;
+    });
+    return res.send(vehiculo);
   }
 
   public async getVehiculos(req: express.Request, res: express.Response) {
