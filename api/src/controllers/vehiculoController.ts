@@ -11,6 +11,10 @@ export class VehiculoController {
 
   public initializeRoutes(vehiculoService: VehiculoService) {
     // Controller endpoints
-    this.router.post(this.path, vehiculoService.findVehiculos);
+    this.router.get(this.path, vehiculoService.getVehiculos);
+    this.router.get(
+      this.path + "/:cod_auto",
+      vehiculoService.getVehiculosByCod
+    );
   }
 }
