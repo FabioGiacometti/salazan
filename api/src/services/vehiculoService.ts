@@ -29,11 +29,17 @@ export class VehiculoService {
       .where("vehiculos.cod_auto = :cod", { cod: cod_auto })
       .getOne();
 
-    vehiculo.imagenes.forEach((element) => {
-      let imageBase64 = Buffer.from(element.imagen).toString("base64");
-      element.imagen = imageBase64;
-    });
-    return res.send(vehiculo);
+    if (vehiculo) {
+      vehiculo.imagenes.forEach((element) => {
+        let imageBase64 = Buffer.from(element.imagen).toString("base64");
+        element.imagen = imageBase64;
+      });
+      return res.send(vehiculo);
+    } else {
+      res.send({
+        message: "No hubo resultados para el codigo del auto " + cod_auto,
+      });
+    }
   }
 
   public async getVehiculos(req: express.Request, res: express.Response) {
