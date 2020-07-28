@@ -1,9 +1,9 @@
 const items = [
-    { icon :'newCar', title: "Nuevos", dir : "http://www.salazanautomotores.com.ar/0km.asp" },
-    { icon :'usedCar', title: "Usados", dir : "http://salazan.now.sh/" },
-    { icon :'finaciacion', title: "Finaciación", dir : "http://www.salazanautomotores.com.ar/financiacion.asp" },
-    { icon :'empresa', title: "Empresa", dir : "http://www.salazanautomotores.com.ar/empresa.asp" },
-    { icon :'contacto', title: "Contacto", dir : "http://www.salazanautomotores.com.ar/contacto.asp" }
-]
+  { icon: "newCar", title: "Nuevos", dir: "/alta" },
+  { icon: "usedCar", title: "Usados", dir: "/usados" },
+  { icon: "finaciacion", title: "Finaciación", dir: "/finaciacion" },
+  { icon: "empresa", title: "Empresa", dir: "/empresa" },
+  { icon: "contacto", title: "Contacto", dir: "/contacto" },
+];
 
-export default items
+export default items;

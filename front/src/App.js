@@ -1,22 +1,26 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Details from "./pages/details";
 import Header from "./components/header/Header";
-import Main from "./components/main/Main";
-import Aside from "./components/aside/Aside";
-import Carousel from "./components/carousel/Carousel";
-import BottomNavigation from "./components/main/BottomNavigation";
-
+import Contact from "./pages/contact";
 class App extends React.Component {
   render() {
     return (
-      <div className="App h-screen overflow-x-hidden text-gray-900" style={{fontFamily: "sans-serif"}}>
-        <Header/>
-        <Carousel />
-        <div className="flex flex-col h-full w-full">
-          <Aside />
-          <Main />
-          <BottomNavigation />
-        </div>
-      </div>
+      <Fragment>
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/index" exact component={Home} />
+            <Route path="/:id/detalle" component={Details} />
+            <Route path="/alta" component={Details} />
+            <Route path="/finaciacion" component={Details} />
+            <Route path="/empresa" component={Details} />
+            <Route path="/contacto" component={Contact} />
+          </Switch>
+        </BrowserRouter>
+      </Fragment>
     );
   }
 }
