@@ -3,6 +3,7 @@ import Main from "../components/main/Main";
 import Aside from "../components/aside/Aside";
 import Carousel from "../components/carousel/Carousel";
 import BottomNavigation from "../components/main/BottomNavigation";
+import Latest from "../components/latest/latest";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       className="App h-screen overflow-x-hidden text-gray-900"
       style={{ fontFamily: "sans-serif" }}>
       <Carousel />
+      <Latest/>
       <div className="flex flex-col h-full w-full">
         <Aside />
         <Main />

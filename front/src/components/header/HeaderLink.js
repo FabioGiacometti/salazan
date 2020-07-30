@@ -2,7 +2,7 @@ import React from "react";
 import "./headerlink.css";
 import { Link } from "react-router-dom";
 function HeaderLink(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <Link
       to={props.dir}
