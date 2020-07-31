@@ -14,7 +14,6 @@ const Details = () => {
 
   const servicesGetCardById = async (id) => {
     const cardex = await getCardById(id);
-    console.log("este es cardex", cardex);
     setLabels(cardex.data.detalleKey);
     setValues(cardex.data.detalleValue);
     setImages(cardex.data.pictures);

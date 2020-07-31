@@ -21,7 +21,7 @@ export default class Header extends React.Component {
         <>
           <div
             style={{ backgroundColor: azulSalazan, zIndex: "2", top: 0}}
-            className='sticky w-screen flex items-center justify-between sm:justify-evenly py-3 md:py-0 px-4 md:px-0'
+            className=' fixed w-full flex items-center justify-between sm:justify-evenly py-3 md:py-0 px-4 md:px-0'
           >
             <Logo />
             <Navigation />

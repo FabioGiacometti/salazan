@@ -7,8 +7,8 @@ import Latest from "../components/latest/latest";
 
 const Home = () => {
   return (
-    <div
-      className="App h-screen overflow-x-hidden text-gray-900"
+    <div  
+      className="App text-gray-900"
       style={{ fontFamily: "sans-serif" }}>
       <Carousel />
       <Latest/>

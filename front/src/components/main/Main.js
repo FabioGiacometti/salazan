@@ -13,17 +13,14 @@ const Main = () => {
 
   const servicesGetCards = async () => {
     const cards = await getCards();
-    console.log('CARDSDSDASDASD', cards)
     setItems(cards.data.vehiculos);
     setIsLoaded(true);
   };
 
-  console.count("isloaded", isLoaded);
-
   return (
     <Fragment>
       <div
-        className="h-full w-full pr-4 bg-gray-300 flex flex-row flex-wrap"
+        className="h-full w-full pr-4 bg-gray-300 flex flex-row flex-wrap min-h-screen"
         style={{}}
         id="main">
         {items.length > 0

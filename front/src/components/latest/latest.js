@@ -5,19 +5,16 @@ const Latest = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    console.log("entre al usefect")
     servicesGetCards();
 
   }, []);
 
   const servicesGetCards = async () => {
     const cards = await getCards();
-    console.log("estos son cards", cards);
     setItems(cards.data.vehiculos);
   };
 
   // const latestCards = items.sort(getLatestCards).slice(0, 15);
-  console.log("items", items);
 
   /* let ultimosAutos = latestCards.map((auto) => (
     <Minicard auto={auto} key={auto.cod_auto} />
@@ -28,7 +25,6 @@ const Latest = () => {
 };
 
 const Minicard = (props) => {
-  console.log(props);
   return (
     <div className="w-32 h-32 bg-orange-100 mr-4">
       <p>{props.auto.marca.marca}</p>

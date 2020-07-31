@@ -1,26 +1,47 @@
-import React from 'react'
-import slides from '../../assets/slides'
-import Slide from './Slide'
+import React, { useState } from "react";
+import slides from "../../assets/slides";
+import Slide from "./Slide";
+import "./slide.scss";
 
-export default class Carousel extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {}
-        this.glider = React.createRef()
-    }
+const Carousel = () => {
 
-    handleSlide(){
-        console.log("he sido presionado!")
-    }
+    const [x, setX] = useState(0);
+    const goLeft = () => {
+        if (x === 0) {
+            setX(-200);
+        } else {
+            setX(x + 100);
+        }
+    };
+    const goRight = () => {
+        if (x === -200) {
+            setX(0);
+        } else {
+            setX(x -100);
+        }
+    };
+    
+    setTimeout(goRight, 5000)
+  return (
+    <div
+      className=" flex items-center justify-center border-b-5 border-gray-500 relative "
+      style={{
+        height: "100vh",
+        width: "300vw",
+      }}>
+      {slides.map((item) => (
+        <div className="slide" style={{ transform: `translateX(${x}%)` }}>
+          <Slide item={item} key={item.id} />
+        </div>
+      ))}
+      <button id="goLeft" onClick={goLeft}>
+        
+      </button>
+      <button id="goRight" onClick={goRight}>
+        
+      </button>
+    </div>
+  );
+};
 
-
-
-    render(){
-        const slider = slides.map(item =><Slide item={item} handleSlide={this.handleSlide} key={item.id}/>)
-        return(
-            <div ref={this.glider} className=" flex items-center justify-center border-b-5 border-gray-500" style={{height:"100vh", width: "300vw"}}>
-                {slider}
-            </div>
-        )
-    }
-}
+export default Carousel;
