@@ -20,12 +20,14 @@ const Details = () => {
   };
   
   let fotos = images.map((imagenes) => <img src={`http://salazanautomotores.com.ar/${imagenes}`} alt={imagenes} />);
-  
+  const asyncLabels = Promise.all(labels.map(async label => <p>{label}</p>))
+
   return (
-    <div>
+    <div className="pt-16">
       <p>{labels}</p>
       <p>{values}</p>
-     {fotos}
+      {asyncLabels}
+    {fotos}
     </div>
   );
 };

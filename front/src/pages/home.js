@@ -8,10 +8,10 @@ import Latest from "../components/latest/latest";
 const Home = () => {
   return (
     <div  
-      className="App text-gray-900"
-      style={{ fontFamily: "sans-serif" }}>
+      className="App text-gray-900 overflow-x-hidden"
+      >
       <Carousel />
-      <Latest/>
+      {/* <Latest/> */}
       <div className="flex flex-col h-full w-full">
         <Aside />
         <Main />

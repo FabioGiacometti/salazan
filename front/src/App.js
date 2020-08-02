@@ -12,7 +12,7 @@ import Usados from "./pages/usados"
 class App extends React.Component {
   render() {
     return (
-      <Fragment>
+      <Fragment style={{ fontFamily: "sans-serif" }}>
         <BrowserRouter>
           <Header />
           <Switch>
