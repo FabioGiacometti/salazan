@@ -2,13 +2,13 @@ import React, {useState, useEffect} from "react";
 
 const Slide = (props) => {
 
-  const { imagen, esAuto, titulo, descripcion, precio } = props
-  console.log("estos son props",props)
+  const { imagen, esAuto, titulo, descripcion, precio } = props.item
+  console.log("imagen", `imagen`)
 
   return (
     <div
       className="slider h-screen w-screen overflow-hidden flex flex-col items-center bg-center bg-no-repeat bg-cover"
-      style={{ backgroundImage: `${imagen}` }}>
+      style={{ backgroundImage: `url("${imagen}")` }}>
       <div
         className="w-full sm:w-auto relative h-full m-0 md:my-20 md:mx-12 self-start flex flex-col justify-center sm:justify-evenly pb-32 sm:pb-16 sm:p-16 items-center"
         style={{ backgroundColor: "#00000050" }}>
