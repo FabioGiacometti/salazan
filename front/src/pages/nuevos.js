@@ -7,8 +7,8 @@ const Nuevos = () => {
         ¿Por qué comprar tu 0 km en Salazan Automotores?
       </h1>
 
-      <div class="flex mb-4">
-        <div class="w-1/3 mt-8 mr-6">
+      <div class="flex flex-wrap mb-4">
+        <div class="w-auto md:w-1/3 mt-8 mr-0 sm:mr-6">
           <h2 className="text-red-800 text-lg font-extrabold">
             Te pagamos mejor el usado
           </h2>
@@ -19,7 +19,7 @@ const Nuevos = () => {
             el mejor negocio!
           </p>
         </div>
-        <div class="w-1/3 mt-8 mr-6">
+        <div class="w-auto md:w-1/3 mt-8 mr-0 sm:mr-6">
           <h2 className="text-red-800 text-lg font-extrabold">
             Recibimos tu Plan de Ahorro
           </h2>
@@ -30,7 +30,7 @@ const Nuevos = () => {
             0 kilómetro!
           </p>
         </div>
-        <div class="w-1/3 mt-8">
+        <div class="w-auto md:w-1/3 mt-8">
           <h2 className="text-red-800 text-lg font-extrabold">
             Ofrecemos Financiación Propia
           </h2>

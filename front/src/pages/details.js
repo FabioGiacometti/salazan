@@ -30,7 +30,7 @@ const Details = () => {
         className="h-full justify-center items-center m-auto"
         style={{
           backgroundImage: `url("http://salazanautomotores.com.ar/${imagenes}")`,
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}></div>
@@ -66,9 +66,19 @@ const Details = () => {
   );
 
   return (
-    <div className=" mt-16 max-w-6xl mx-auto mb-16 shadow-2xl rounded-lg bg-gray-200">
-      <div className="flex justify-center h-full relative">
+    <div className="mt-12 md:mt-16 w-full md:max-w-6xl mx-auto mb-16 shadow-2xl rounded-lg bg-gray-200">
+      <Swiper
+          className="flex md:hidden"
+          style={{ flex: "1", height: "350px", margin: "auto" }}
+          spaceBetween={0}
+          slidesPerView={1}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}>
+          {fotos}
+        </Swiper>
+      <div className="flex justify-center h-full relative flex-wrap">
         <Swiper
+          className="hidden md:flex"
           style={{ flex: "1", height: "500px", margin: "auto" }}
           spaceBetween={0}
           slidesPerView={1}
@@ -76,7 +86,7 @@ const Details = () => {
           onSwiper={(swiper) => console.log(swiper)}>
           {fotos}
         </Swiper>
-        <h3 className="absolute" style={{ bottom: "20px", left: "20px" }}>
+        <h3 className="absolute hidden sm:static" style={{ bottom: "20px", left: "20px" }}>
           Deslizar para ver mas imagenes
         </h3>
         <div style={{ flex: "1", background: "#828282" }}>
