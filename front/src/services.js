@@ -21,15 +21,37 @@ export const getLatestCards = (a, b) => {
   }
 };
 
-
 export const getSheetsApi = async () => {
   const response = await fetch(
     "https://spreadsheets.google.com/feeds/cells/1kZTjwdwL5WIE1LTvm81s-3JhjBWSwDuWwWC6Hay3N3s/1/public/full?alt=json"
   );
+  const datos = await response.json()
+  console.log("estos son los datos",datos)
+  return armarObjeto(datos)
 
-  return await response.json()
 };
 
-let sheetsData = getSheetsApi()
+const armarObjeto = (data) => {
+  const entry = data.feed.entry;
+  let headers = []
+  let slides = []
+  let slide = {}
+  let count = 0
+  for(let h = 0; h < 5;h++){
+      headers = [ ...headers, entry[h].content.$t,]
+  }
+  console.log("estos son headers",headers)
+  for(let s = 5; s < entry.length; s++){
+      slide[`${headers[count]}`] = entry[s].content.$t;
+      count++
+      if(count === 5){
+          slides = [ ...slides, slide];
+          slide = {};
+          count = 0;
+      }
+  }
+  return slides
 
-console.log("esto es sheets data", sheetsData)
+}
+
+

@@ -1,9 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { getSheetsApi } from "../../services"
 
 const Slide = (props) => {
-  console.log(props);
-  const { image, model, spec, price } = props.item;
+  const [slides, setSlides] = useState([])
 
+  useEffect(
+    () => {
+      getSlides()
+    },[])
+
+  const getSlides = async () =>{
+    const slides = await getSheetsApi()
+    console.log(slides)
+    setSlides(slides)
+  }
+
+
+  const { image, model, spec, price } = props.item;
   return (
     <div
       className="slider h-screen w-screen overflow-hidden flex flex-col items-center bg-center bg-no-repeat bg-cover"

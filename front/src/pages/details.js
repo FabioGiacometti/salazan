@@ -27,11 +27,14 @@ const Details = () => {
   let fotos = images.map((imagenes) => (
     <SwiperSlide>
       <div
-        className="h-full bg-red-700"
+        className="h-full justify-center items-center m-auto"
         style={{
           backgroundImage: `url("http://salazanautomotores.com.ar/${imagenes}")`,
-          backgroundSize: "cover",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
         }}></div>
+      <h3 className="text-gray">Deslize para ver mas fotos</h3>
     </SwiperSlide>
   ));
 
@@ -47,7 +50,9 @@ const Details = () => {
 
   let descripcion = values.map((texto) =>
     texto !== "" ? (
-      <p className="text-white mt-2" style={{ borderBottom: "solid 1px #ffffff50" }}>
+      <p
+        className="text-white mt-2"
+        style={{ borderBottom: "solid 1px #ffffff50" }}>
         {" "}
         {texto}
       </p>
@@ -61,22 +66,24 @@ const Details = () => {
   );
 
   return (
-    <div className=" overflow-hidden mt-16 max-w-6xl mx-auto mb-16 shadow-2xl rounded-lg ">
-      <div
-        className="flex justify-center h-full"
-        style={{ background: "#828282" }}>
+    <div className=" mt-16 max-w-6xl mx-auto mb-16 shadow-2xl rounded-lg bg-gray-200">
+      <div className="flex justify-center h-full relative">
         <Swiper
-          style={{ flex: "1" }}
+          style={{ flex: "1", height: "500px", margin: "auto" }}
           spaceBetween={0}
           slidesPerView={1}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}>
           {fotos}
         </Swiper>
-
-        <div style={{ flex: "1" }}>
+        <h3 className="absolute" style={{ bottom: "20px", left: "20px" }}>
+          Deslizar para ver mas imagenes
+        </h3>
+        <div style={{ flex: "1", background: "#828282" }}>
           <div className="mx-auto w-auto">
-            <h1 className="text-red-700 ml-8 mt-8 font-extrabold text-3xl">
+            <h1
+              className="text-gray-200 ml-8 mt-8 font-extrabold text-3xl"
+              style={{ textShadow: "0px 2px 1px #00000050" }}>
               {values[0]} {values[1]}
             </h1>
             <div className="flex mt-6 items-center">
@@ -84,7 +91,7 @@ const Details = () => {
               <div className="pl-8 my-auto">{descripcion}</div>
             </div>
             <p className="mt-6 ml-8 text-white pb-16">
-              Este auto recibio{" "}
+              Este auto recibió{" "}
               <span className="font-bold text-red-700">{visitas}</span> visitas
             </p>
           </div>
