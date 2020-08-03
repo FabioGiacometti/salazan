@@ -12,7 +12,7 @@ import Usados from "./pages/usados"
 class App extends React.Component {
   render() {
     return (
-      <Fragment style={{ fontFamily: "sans-serif" }}>
+      <div style={{ fontFamily: "sans-serif" }}>
         <BrowserRouter>
           <Header />
           <Switch>
@@ -27,7 +27,7 @@ class App extends React.Component {
           </Switch>
           <Footer/>
         </BrowserRouter>
-      </Fragment>
+      </div>
     );
   }
 }

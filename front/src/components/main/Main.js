@@ -2,14 +2,21 @@ import React, { useEffect, Fragment } from "react";
 import Card from "./Card";
 import ContactButton from "./ContactButton";
 import { useState } from "react";
-import { getCards } from "../../services";
+import { getCards, getSheetsApi } from "../../services";
+
 const Main = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
+
+
+
   useEffect(() => {
     servicesGetCards();
+    getSheetsApi();
   }, []);
+  
+
 
   const servicesGetCards = async () => {
     const cards = await getCards();

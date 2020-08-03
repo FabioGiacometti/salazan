@@ -3,8 +3,7 @@ import "./headerlink.css";
 import { Link } from "react-router-dom";
 function HeaderLink(props) {
   return (
-    <Link
-      to={props.dir}
+    <Link to={props.dir}
       className="navItem flex justify-center items-center h-full">
       <div onClick={null} className="navButton">
         <button className="w-full h-full flex flex-col self-end items-center sm:items-start font-light text-blue-100 text-xs transition-all duration-1000 ease-in-out">

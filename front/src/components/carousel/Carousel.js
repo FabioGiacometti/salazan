@@ -30,8 +30,8 @@ const Carousel = () => {
         width: "300vw",
       }}>
       {slides.map((item) => (
-        <div className="slide" style={{ transform: `translateX(${x}%)` }}>
-          <Slide item={item} key={item.id} />
+        <div className="slide" style={{ transform: `translateX(${x}%)` }} key={item.id}>
+          <Slide item={item}  />
         </div>
       ))}
       <button id="goLeft" onClick={goLeft}>
