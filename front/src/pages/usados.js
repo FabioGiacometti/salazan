@@ -4,7 +4,8 @@ import Aside from "../components/aside/Aside";
 
 const Usados = () => {
   return (
-  <>  
+  <> 
+    <div className="mt-12"></div> 
     <Aside/>
     <Main/>
   </>
