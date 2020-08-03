@@ -15,9 +15,9 @@ export default class AsideFilter extends React.Component {
           )}
         </div>
 
-        <select className="w-full h-8 rounded-xl p-1 text-xs bg-gray-100">
+        <select className="w-full h-10 px-2 rounded-lg text-xs bg-gray-100">
           {filt.items.map((item, index) => {
-            return <option key={index} className="p-2 shadow-md">{item}</option>;
+            return <option key={index} className="p-10 shadow-md">{item}</option>;
           })}
         </select>
       </div>

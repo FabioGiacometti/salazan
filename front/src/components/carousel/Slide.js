@@ -1,38 +1,26 @@
 import React, {useState, useEffect} from "react";
-import { getSheetsApi } from "../../services"
 
 const Slide = (props) => {
-  const [slides, setSlides] = useState([])
 
-  useEffect(
-    () => {
-      getSlides()
-    },[])
+  const { imagen, esAuto, titulo, descripcion, precio } = props
+  console.log("estos son props",props)
 
-  const getSlides = async () =>{
-    const slides = await getSheetsApi()
-    console.log(slides)
-    setSlides(slides)
-  }
-
-
-  const { image, model, spec, price } = props.item;
   return (
     <div
       className="slider h-screen w-screen overflow-hidden flex flex-col items-center bg-center bg-no-repeat bg-cover"
-      style={{ backgroundImage: `url(${image})` }}>
+      style={{ backgroundImage: `${imagen}` }}>
       <div
         className="w-full sm:w-auto relative h-full m-0 md:my-20 md:mx-12 self-start flex flex-col justify-center sm:justify-evenly pb-32 sm:pb-16 sm:p-16 items-center"
         style={{ backgroundColor: "#00000050" }}>
         <p
           className="font-black text-white text-6xl"
           style={{ textShadow: "0 2px 2px gray" }}>
-          {model}
+          {titulo}
         </p>
-        <p className="font-light text-4xl text-white">{spec}</p>
+        <p className="font-light text-4xl text-white">{descripcion}</p>
         <hr />
         <p className="font-black text-5xl text-white py-2 px-4 border-2 border-yellow-300 ">
-          {price}
+          {precio}
         </p>
         <h4 className="text-white">Entrega y cuotas</h4>
         <br />
