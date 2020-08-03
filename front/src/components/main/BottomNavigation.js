@@ -8,7 +8,7 @@ export default class BottomNavigation extends React.Component {
 }
 render() {
     const navigationMenu = items.map((item) => (
-        <HeaderLink icon={item.icon} title={item.title} key={item.title} />
+        <HeaderLink icon={item.icon} title={item.title} key={item.title}  dir={item.dir}/>
         ));
         
         if(viewport <=768){
