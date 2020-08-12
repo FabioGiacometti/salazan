@@ -8,7 +8,7 @@ const Footer = () => {
           <img src={require(`../../assets/images/footer_label.jpg`)} alt="" className="mx-auto mb-4"/>
           <Logo />
         </div>
-      <div className="mt-8 md:mt-0" >
+      <div className="mt-8 md:mt-0 md:border-l-2 md:pl-2 border-gray-500" >
         <h3 className="font-bold">CASA CENTRAL</h3>
         <p className="text-xs">
           AV. INDEPENDENCIA 4904
@@ -16,7 +16,7 @@ const Footer = () => {
         <p className="text-xs">Tel.: (379) 447 2127</p>
         <p className="text-xs">3400 - CORRIENTES</p>
       </div >
-      <div className="mt-8 md:mt-0">
+      <div className="mt-8 md:mt-0 md:border-l-2 md:pl-2 border-gray-500">
         <h3 className="font-bold">SUCURSAL</h3>
         <p className="text-xs">
           AV. INDEPENDENCIA 4904
@@ -24,7 +24,7 @@ const Footer = () => {
         <p className="text-xs">Tel.: (379) 447 2127</p>
         <p className="text-xs">3400 - CORRIENTES</p>
       </div>
-      <div className="social mt-8 sm:mt-0"><a href="https://www.facebook.com/SalazanAutomotores" className="flex items-center "><img src={require(`../../assets/images/facebook.png`)} alt="facebookLogo" className="h-8 mr-4"/>/SALAZAN AUTOMOTORES</a></div>
+      <div className="social mt-8 sm:mt-0"><a href="https://www.facebook.com/SalazanAutomotores" className="flex items-center "><img src={require(`../../assets/images/facebook.png`)} alt="facebookLogo" className="h-8 mr-4"/>/SALAZAN <br/> AUTOMOTORES</a></div>
     </div>
   );
 };

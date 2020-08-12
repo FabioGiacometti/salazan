@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class  CallToAction extends React.Component {
   static defaultProps = {
@@ -17,10 +18,9 @@ export default class  CallToAction extends React.Component {
    
     return (
       <>
-        <button
+        <Link to="/contacto"
           style={{ styler }}
           className={ButtonClass}
-          onClick={() => console.log(this)}
         >
           {this.props.img && (
             <img
@@ -32,7 +32,7 @@ export default class  CallToAction extends React.Component {
           <p className="text-sm">
             {this.props.text}
           </p>
-        </button>
+        </Link>
       </>
     );
   }

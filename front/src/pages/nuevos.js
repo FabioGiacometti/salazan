@@ -2,13 +2,13 @@ import React from "react";
 
 const Nuevos = () => {
   return (
-    <div className="pt-24 overflow-hidden mt-8 max-w-6xl mx-auto px-16 mb-16 shadow-2xl rounded-lg pb-16">
+    <div className="pt-16 md:pt-24 overflow-hidden mt-8 md:max-w-6xl mx-auto px-6 md:px-16 mb-16 shadow-2xl rounded-lg pb-16">      
       <h1 className="text-4xl text-red-800 leading-none tracking-tight">
         ¿Por qué comprar tu 0 km en Salazan Automotores?
       </h1>
 
       <div class="flex flex-wrap mb-4">
-        <div class="w-auto md:w-1/3 mt-8 mr-0 sm:mr-6">
+        <div class="w-auto md:w-1/3 mt-8 mr-0 sm:pr-6">
           <h2 className="text-red-800 text-lg font-extrabold">
             Te pagamos mejor el usado
           </h2>
@@ -19,7 +19,7 @@ const Nuevos = () => {
             el mejor negocio!
           </p>
         </div>
-        <div class="w-auto md:w-1/3 mt-8 mr-0 sm:mr-6">
+        <div class="w-auto md:w-1/3 mt-8 mr-0 sm:pr-6">
           <h2 className="text-red-800 text-lg font-extrabold">
             Recibimos tu Plan de Ahorro
           </h2>

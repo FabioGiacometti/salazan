@@ -2,7 +2,7 @@ import React from "react";
 
 const Empresa = () => {
   return (
-    <div className="pt-24 overflow-hidden mt-8 max-w-6xl mx-auto px-16 mb-16 shadow-2xl rounded-lg">
+    <div className="pt-16 md:pt-24 overflow-hidden mt-8 md:max-w-6xl mx-auto px-6 md:px-16 mb-16 shadow-2xl rounded-lg pb-16">     
       <h1 className="text-5xl text-red-800">Reseña Histórica</h1>
       <p className="mt-8">
         Kenis Salazan inicia su actividad en el negocio de la venta de autos en

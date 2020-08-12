@@ -5,17 +5,16 @@ import Carousel from "../components/carousel/Carousel";
 import BottomNavigation from "../components/main/BottomNavigation";
 import Latest from "../components/latest/latest";
 
-const Home = () => {
+const Home = (busqueda) => {
+  let item = busqueda
+  console.log("esto es busqueda en el home", item)
   return (
-    <div  
-      className="App text-gray-900 overflow-x-hidden"
-      >
-      <Carousel />
+    <div className="App text-gray-900 overflow-x-hidden">
+      {item === undefined ? null : <Carousel />}
       {/* <Latest/> */}
       <div className="flex flex-col h-full w-full">
-        <Aside />
-        <Main />
-        <BottomNavigation />
+        <Main busqueda={busqueda.busqueda} />
+        <BottomNavigation/>
       </div>
     </div>
   );
