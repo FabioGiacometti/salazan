@@ -1,0 +1,9 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+/* aca va el custom css */
+
+@import "tailwindcss/utilities";
+
+/* aca van las clases utilitarias ej .skew45{ ... } */

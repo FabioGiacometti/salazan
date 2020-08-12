@@ -1,0 +1,23 @@
+.navItem{
+    box-sizing: border-box;
+    border-bottom: solid 3px transparent;
+    height: 20px;
+    padding: 10px 15px;
+    
+    transition: border-bottom 300ms;
+}
+
+.navItem:hover  {
+    border-bottom: solid 3px #006da8;
+}
+
+/* 
+.navButton ::after {
+    content: "";
+    width: 1px;
+    height: 39px;
+    background-color: #ffffff14;
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-16px);
+} */
