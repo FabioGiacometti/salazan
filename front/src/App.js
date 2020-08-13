@@ -21,7 +21,7 @@ const App = () => {
           <Route
             path={["/", "index.html", "/home", "/index", "/index.html"]}
             exact
-            render={() => <Home busqueda={busqueda} />}
+            render={() => <Home />}
           />
           <Route path="/usados" render={() => <Usados busqueda={busqueda} />} />
 
