@@ -18,12 +18,14 @@ const App = () => {
       <BrowserRouter>
         <Header getSearch={setBusqueda} />
         <Switch>
-          <Route
+          {/* <Route
             path={["/", "index.html", "/home", "/index", "/index.html"]}
             exact
-            render={() => <Home />}
+            render={() => <Home busqueda={busqueda} />}
           />
-          <Route path="/usados" render={() => <Usados busqueda={busqueda} />} />
+          <Route path="/usados" render={() => <Usados busqueda={busqueda} />} /> */}
+          <Route path="/" exact component={Home} />
+          <Route path="/index" exact component={Home} />
 
           <Route path="/:id/detalle" component={Details} />
           <Route path="/nuevos" component={Nuevos} />
