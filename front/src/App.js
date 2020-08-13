@@ -10,9 +10,9 @@ import Empresa from "./pages/empresa";
 import Footer from "./components/footer/footer";
 import Usados from "./pages/usados";
 
-const App = () => {
-  const [busqueda, setBusqueda] = useState();
-
+class App extends React.Component() {
+  // const [busqueda, setBusqueda] = useState();
+render(){
   return (
     <div style={{ fontFamily: "sans-serif" }}>
       <BrowserRouter>
@@ -38,5 +38,5 @@ const App = () => {
     </div>
   );
 };
-
+}
 export default App;
