@@ -9,7 +9,7 @@ class Home extends React.Component {
     <div className="App text-gray-900 overflow-x-hidden">
       <Carousel />
       <div className="flex flex-col h-full w-full">
-        <Main busqueda={busqueda.busqueda}/>
+        {/* <Main busqueda={busqueda.busqueda}/> */}
         <BottomNavigation />
       </div>
     </div>
