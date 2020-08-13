@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Details from "./pages/details";
@@ -8,7 +8,8 @@ import Nuevos from "./pages/nuevos";
 import Financiacion from "./pages/financiacion";
 import Empresa from "./pages/empresa";
 import Footer from "./components/footer/footer";
-import Usados from "./pages/usados"
+import Usados from "./pages/usados";
+
 class App extends React.Component {
   render() {
     return (
