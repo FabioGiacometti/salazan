@@ -3,7 +3,8 @@ import Main from "../components/main/Main";
 import Carousel from "../components/carousel/Carousel";
 import BottomNavigation from "../components/main/BottomNavigation";
 
-const Home = (busqueda) => {
+class Home extends React.Component {
+  render(){
   return (
     <div className="App text-gray-900 overflow-x-hidden">
       <Carousel />
@@ -12,7 +13,8 @@ const Home = (busqueda) => {
         <BottomNavigation />
       </div>
     </div>
-  );
-};
-
+  )
+  }
+}
+  
 export default Home;
