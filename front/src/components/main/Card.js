@@ -38,7 +38,7 @@ const Card = (vehiculo) => {
         <div className={cardContentStyle}>
           <div>
             <h2 className="text-gray-700 text-sm leading-tight">
-              {card.marca} - {card.modelo}
+             {card.modelo}
             </h2>
             <p className="text-red-500 text-xs">{card.anio}</p>
             <p className="text-gray-500 text-xs">#{card.id}</p>

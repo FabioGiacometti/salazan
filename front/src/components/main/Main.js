@@ -25,7 +25,7 @@ const Main = (busqueda) => {
         item["anio"].match(search) ||
         item["combustible"].match(search) ||
         item["id"].match(search) ||
-        item["marca"].match(search) ||
+        // item["marca"].match(search) ||
         item["modelo"].match(search)
       );
     });
@@ -43,9 +43,9 @@ const Main = (busqueda) => {
       let combustibleId = arr[1].split("#");
       let combustible = combustibleId[0];
       let id = combustibleId[1];
-      let modeloArr = vehiculo[i].modelo.split(/(?<=^\S+)\s/);
-      let marca = modeloArr[0];
-      let modelo = modeloArr[1];
+      // let modeloArr = vehiculo[i].modelo.split(/(?<=^\S+)\s/);
+      // let marca = modeloArr[0];
+      // let modelo = modeloArr[1];
       let precio = Number(
         vehiculo[i].precio.replace(".", "").replace(".", "").slice(2)
       );
@@ -54,8 +54,8 @@ const Main = (busqueda) => {
         anio,
         combustible,
         id,
-        marca,
-        modelo,
+        // marca,
+        // modelo,
         precio,
       });
       setIsLoaded(true);
