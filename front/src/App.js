@@ -15,18 +15,21 @@ const App = () => {
   const [busqueda, setBusqueda] = useState();
 
   return (
-    <div style={{ fontFamily: "sans-serif" }} className="relative">
-      <BrowserRouter>
+    <div style={{ fontFamily: "sans-serif" }} >
+      <BrowserRouter className="relative">
         <Header getSearch={setBusqueda} />
         <div style={{ zIndex: "0" }}>
-          <Switch >
+          <Switch>
             <Route
               path={["/", "index.html", "/home", "/index"]}
               exact
               render={() => <Home busqueda={busqueda} />}
             />
-            <Route path="/usados" render={() => <Usados busqueda={busqueda} />} />
-  
+            <Route
+              path="/usados"
+              render={() => <Usados busqueda={busqueda} />}
+            />
+
             <Route path="/:id/detalle" component={Details} />
             <Route path="/nuevos" component={Nuevos} />
             <Route path="/finaciacion" component={Financiacion} />
@@ -34,8 +37,8 @@ const App = () => {
             <Route path="/contacto" component={Contact} />
           </Switch>
         </div>
-        <div style={{ zIndex: "10" }}>
-                  <ContactButton/>
+        <div style={{ zIndex: "10" }} className="relative">
+          <ContactButton />
           <BottomNavigation />
         </div>
         <Footer />

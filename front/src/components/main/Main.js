@@ -1,6 +1,5 @@
 import React, { useEffect, Fragment } from "react";
 import Card from "./Card";
-import ContactButton from "./ContactButton";
 import { useState } from "react";
 import { getCards } from "../../services";
 
@@ -25,7 +24,6 @@ const Main = (busqueda) => {
         item["anio"].match(search) ||
         item["combustible"].match(search) ||
         item["id"].match(search) ||
-        // item["marca"].match(search) ||
         item["modelo"].match(search)
       );
     });
@@ -43,9 +41,7 @@ const Main = (busqueda) => {
       let combustibleId = arr[1].split("#");
       let combustible = combustibleId[0];
       let id = combustibleId[1];
-      // let modeloArr = vehiculo[i].modelo.split(/(?<=^\S+)\s/);
-      // let marca = modeloArr[0];
-      // let modelo = modeloArr[1];
+
       let precio = Number(
         vehiculo[i].precio.replace(".", "").replace(".", "").slice(2)
       );
@@ -54,8 +50,6 @@ const Main = (busqueda) => {
         anio,
         combustible,
         id,
-        // marca,
-        // modelo,
         precio,
       });
       setIsLoaded(true);
@@ -67,7 +61,6 @@ const Main = (busqueda) => {
 
   return (
     <Fragment>
-      {/* <Aside /> */}
       <div
         className="h-full w-full pr-4 bg-gray-100 flex flex-row flex-wrap min-h-screen"
         style={{}}
@@ -82,7 +75,6 @@ const Main = (busqueda) => {
       
             return <Card vehiculo={card} key={index} />;
           })}
-        <ContactButton />
       </div>
     </Fragment>
   );

@@ -24,7 +24,6 @@ const Carousel = () => {
 
   const getSlides = async () => {
     const slides = await getSheetsApi();
-    console.log(slides);
     setSlides(slides);
   };
 

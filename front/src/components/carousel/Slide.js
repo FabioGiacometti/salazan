@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Slide = (props) => {
 
   const { imagen, esAuto, titulo, descripcion, precio } = props.item
-  console.log("imagen", `imagen`)
 
   return (
     <div

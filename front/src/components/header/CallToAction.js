@@ -21,7 +21,6 @@ export default class  CallToAction extends React.Component {
         <button
           style={{ styler }}
           className={ButtonClass}
-          onClick={() => console.log(this)}
         >
           {this.props.img && (
             <img

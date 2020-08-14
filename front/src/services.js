@@ -26,7 +26,6 @@ export const getSheetsApi = async () => {
     "https://spreadsheets.google.com/feeds/cells/1kZTjwdwL5WIE1LTvm81s-3JhjBWSwDuWwWC6Hay3N3s/1/public/full?alt=json"
   );
   const datos = await response.json()
-  console.log("estos son los datos",datos)
   return armarObjeto(datos)
 
 };
@@ -40,7 +39,6 @@ const armarObjeto = (data) => {
   for(let h = 0; h < 5;h++){
       headers = [ ...headers, entry[h].content.$t,]
   }
-  console.log("estos son headers",headers)
   for(let s = 5; s < entry.length; s++){
       slide[`${headers[count]}`] = entry[s].content.$t;
       count++
