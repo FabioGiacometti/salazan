@@ -9,28 +9,34 @@ import Financiacion from "./pages/financiacion";
 import Empresa from "./pages/empresa";
 import Footer from "./components/footer/footer";
 import Usados from "./pages/usados";
+import BottomNavigation from "./components/main/BottomNavigation";
 
 const App = () => {
   const [busqueda, setBusqueda] = useState();
 
   return (
-    <div style={{ fontFamily: "sans-serif" }}>
+    <div style={{ fontFamily: "sans-serif" }} className="relative">
       <BrowserRouter>
         <Header getSearch={setBusqueda} />
-        <Switch>
-          <Route
-            path={["/", "index.html", "/home", "/index"]}
-            exact
-            render={() => <Home busqueda={busqueda} />}
-          />
-          <Route path="/usados" render={() => <Usados busqueda={busqueda} />} />
-
-          <Route path="/:id/detalle" component={Details} />
-          <Route path="/nuevos" component={Nuevos} />
-          <Route path="/finaciacion" component={Financiacion} />
-          <Route path="/empresa" component={Empresa} />
-          <Route path="/contacto" component={Contact} />
-        </Switch>
+        <div style={{ zIndex: "0" }}>
+          <Switch >
+            <Route
+              path={["/", "index.html", "/home", "/index"]}
+              exact
+              render={() => <Home busqueda={busqueda} />}
+            />
+            <Route path="/usados" render={() => <Usados busqueda={busqueda} />} />
+  
+            <Route path="/:id/detalle" component={Details} />
+            <Route path="/nuevos" component={Nuevos} />
+            <Route path="/finaciacion" component={Financiacion} />
+            <Route path="/empresa" component={Empresa} />
+            <Route path="/contacto" component={Contact} />
+          </Switch>
+        </div>
+        <div style={{ zIndex: "10" }}>
+          <BottomNavigation />
+        </div>
         <Footer />
       </BrowserRouter>
     </div>
