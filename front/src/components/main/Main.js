@@ -69,7 +69,7 @@ const Main = (busqueda) => {
     <Fragment>
       {/* <Aside /> */}
       <div
-        className="h-full w-full pr-4 bg-gray-200 flex flex-row flex-wrap min-h-screen"
+        className="h-full w-full pr-4 bg-gray-100 flex flex-row flex-wrap min-h-screen"
         style={{}}
         id="main">
         {newItems.length <= 0 ? (items.length > 0

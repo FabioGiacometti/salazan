@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCardById } from "../services";
+import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.scss";
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
+
+import "../components/carousel/slide.scss";
+
+SwiperCore.use([Navigation, Pagination, Scrollbar,]);
 
 const Details = () => {
   const [labels, setLabels] = useState([]);
@@ -68,6 +76,11 @@ const Details = () => {
   return (
     <div className="mt-12 md:mt-16 w-full md:max-w-6xl mx-auto mb-16 shadow-2xl rounded-lg bg-gray-200">
       <Swiper
+       navigation
+       pagination={{ clickable: true }}
+       scrollbar={{ draggable: true }}
+       onSwiper={(swiper) => console.log(swiper)}
+       onSlideChange={() => console.log('slide change')}
           className="flex md:hidden"
           style={{ flex: "1", height: "350px", margin: "auto" }}
           spaceBetween={0}
@@ -78,6 +91,11 @@ const Details = () => {
         </Swiper>
       <div className="flex justify-center h-full relative flex-wrap">
         <Swiper
+         navigation
+         pagination={{ clickable: true }}
+         scrollbar={{ draggable: true }}
+         onSwiper={(swiper) => console.log(swiper)}
+         onSlideChange={() => console.log('slide change')}
           className="hidden md:flex"
           style={{ flex: "1", height: "500px", margin: "auto" }}
           spaceBetween={0}
@@ -86,9 +104,7 @@ const Details = () => {
           onSwiper={(swiper) => console.log(swiper)}>
           {fotos}
         </Swiper>
-        <h3 className="absolute hidden sm:static" style={{ bottom: "20px", left: "20px" }}>
-          Deslizar para ver mas imagenes
-        </h3>
+       
         <div style={{ flex: "1", background: "#828282" }}>
           <div className="mx-auto w-auto">
             <h1

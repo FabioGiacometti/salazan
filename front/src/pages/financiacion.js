@@ -2,7 +2,7 @@ import React from "react";
 
 const Financiacion = () => {
   return (
-    <div className="pt-24 overflow-hidden mt-8 max-w-6xl mx-auto px-16 mb-16 shadow-2xl rounded-lg">
+    <div className="pt-16 md:pt-24 overflow-hidden mt-8 md:max-w-6xl mx-auto px-8 md:px-16 mb-16 shadow-2xl rounded-lg pb-16">
       <h1 className="text-5xl text-red-800 leading-none">
         Tu 0km o Usado con la Mejor Financiación del mercado
       </h1>

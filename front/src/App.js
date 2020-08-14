@@ -10,7 +10,7 @@ import Empresa from "./pages/empresa";
 import Footer from "./components/footer/footer";
 import Usados from "./pages/usados";
 import BottomNavigation from "./components/main/BottomNavigation";
-
+import ContactButton from "./components/main/ContactButton";
 const App = () => {
   const [busqueda, setBusqueda] = useState();
 
@@ -35,6 +35,7 @@ const App = () => {
           </Switch>
         </div>
         <div style={{ zIndex: "10" }}>
+                  <ContactButton/>
           <BottomNavigation />
         </div>
         <Footer />

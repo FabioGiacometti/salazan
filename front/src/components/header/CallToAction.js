@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class  CallToAction extends React.Component {
   static defaultProps = {
@@ -12,11 +13,11 @@ export default class  CallToAction extends React.Component {
   };
 
   render() {
-    const { bg, img, styler } = this.props;
+    const { bg, styler } = this.props;
     const ButtonClass = `px-4 bg-${bg}-600 border-${bg}-700 text--100 text-lg rounded flex justify-evenly items-center font-bold text-white border flex right-0 bottom-0 h-8 w-full max-w-xs	shadow-2xl`;
    
     return (
-      <>
+      <Link to={"/contacto"}>
         <button
           style={{ styler }}
           className={ButtonClass}
@@ -33,7 +34,7 @@ export default class  CallToAction extends React.Component {
             {this.props.text}
           </p>
         </button>
-      </>
+      </Link>
     );
   }
 }
